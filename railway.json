@@ -1,0 +1,14 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "buildCommand": "npm install && npm run build",
+    "startCommand": "npm start",
+    "watchPatterns": ["server/**", "client/**", "package.json"]
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "restartPolicyType": "onFailure",
+    "restartPolicyMaxRetries": 10
+  }
+}
+

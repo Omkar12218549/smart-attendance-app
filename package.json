@@ -9,7 +9,8 @@
     "server": "npm --prefix server run dev",
     "client": "npm --prefix client run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "npm --prefix server start"
+    "build": "npm --prefix client run build",
+    "start": "node server/server.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
