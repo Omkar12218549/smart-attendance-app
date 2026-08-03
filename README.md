@@ -2,6 +2,10 @@
 
 A full-stack Smart Attendance System with **QR-based attendance marking**, role-based dashboards (Admin / Teacher / Student), analytics, and report exports.
 
+> 🔴 **Live Demo:** https://smart-attendance-app.up.railway.app
+>
+> GitHub: https://github.com/Omkar12218549/smart-attendance-app
+
 ## ✨ Features
 
 ### 🎓 Student
@@ -67,6 +71,31 @@ Open **http://localhost:5173**
 | Teacher | `teacher@college.edu` | `teacher123` |
 | Student | `student@college.edu` | `student123` |
 
+## ☁️ Deployment (Railway)
+
+The app is production-ready with auto-seed and static file serving.
+
+```bash
+# 1. Install Railway CLI and login
+npm i -g @railway/cli
+railway login
+
+# 2. Create a project and link it
+railway init
+railway link
+
+# 3. Deploy (root has railway.json config)
+railway up
+
+# 4. Open the deployed app
+railway open
+```
+
+The `railway.json` build config:
+- Build: `npm install && npm run build`
+- Start: `npm start` (serves API + client build)
+- Health check: `/api/health`
+
 ## 📁 Project Structure
 
 ```
@@ -84,6 +113,7 @@ attendence app/
 │   ├── routes/          # API routes
 │   ├── seed.js          # Sample data
 │   └── server.js
+├── railway.json         # Railway deployment config
 └── package.json         # Root scripts
 ```
 
